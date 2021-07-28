@@ -35,6 +35,14 @@ INSERT INTO animals
 VALUES
     ('derpMan', 'dog', 1, 3, true, true),
     ('derpMan2', 'dog', 2, 3, true, true),
-    ('derpMan3', 'dog', 5, 3, true, true);
+    ('derpMan3', 'dog', 5, 3, false, true),
+    ('derpMan4', 'dog', 3, 3, true, true),
+    ('derpMan5', 'dog', 4, 3, true, true),
+    ('derpMan6', 'dog', 7, 3, false, true),
+    ('derpMan7', 'dog', 4, 3, true, true),
+    ('derpMan8', 'dog', 3, 3, false, true),
+    ('derpMan9', 'dog', 2, 3, true, true),
+    ('derpMan10', 'dog', 1, 3, true, true);
+
 
 SELECT * FROM animals;
