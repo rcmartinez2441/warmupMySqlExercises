@@ -16,12 +16,13 @@ CREATE DATABASE IF NOT EXISTS warmup_exercises_db;
 
 USE warmup_exercises_db;
 
+DROP TABLE IF EXISTS animals;
 CREATE TABLE IF NOT EXISTS animals (
   animal_id int AUTO_INCREMENT NOT NULL,
   name VARCHAR(69) NOT NULL,
   type VARCHAR(69) NOT NULL,
   age int NOT NULL,
-  size double NOT NULL,
+  size VARCHAR(69) NOT NULL,
   is_Adoptable boolean NOT NULL,
   is_Cute boolean NOT NULL,
   PRIMARY KEY (animal_id)
@@ -33,16 +34,16 @@ TRUNCATE animals;
 INSERT INTO animals
 (name, type, age, size, is_Adoptable, is_Cute)
 VALUES
-    ('derpMan', 'dog', 1, 3, true, true),
-    ('derpMan2', 'dog', 2, 3, true, true),
-    ('derpMan3', 'dog', 5, 3, false, true),
-    ('derpMan4', 'dog', 3, 3, true, true),
-    ('derpMan5', 'dog', 4, 3, true, true),
-    ('derpMan6', 'dog', 7, 3, false, true),
-    ('derpMan7', 'dog', 4, 3, true, true),
-    ('derpMan8', 'dog', 3, 3, false, true),
-    ('derpMan9', 'dog', 2, 3, true, true),
-    ('derpMan10', 'dog', 1, 3, true, true);
+    ('derpMan', 'dog', 1, 'sm', true, true),
+    ('derpMan2', 'dog', 2, 'md', true, true),
+    ('derpMan3', 'dog', 5, 'lg', false, true),
+    ('derpMan4', 'dog', 3, 'sm', true, true),
+    ('derpMan5', 'dog', 4, 'md', true, true),
+    ('derpMan6', 'dog', 7, 'lg', false, true),
+    ('derpMan7', 'dog', 4, 'sm', true, true),
+    ('derpMan8', 'dog', 3, 'md', false, true),
+    ('derpMan9', 'dog', 2, 'lg', true, true),
+    ('derpMan10', 'dog', 1, 'sm', true, true);
 
 
 SELECT * FROM animals;
