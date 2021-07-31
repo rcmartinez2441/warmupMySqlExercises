@@ -35,15 +35,34 @@ INSERT INTO animals
 (name, type, age, size, is_Adoptable, is_Cute)
 VALUES
     ('derpMan', 'dog', 1, 'sm', true, true),
-    ('derpMan2', 'dog', 2, 'md', true, true),
+    ('derpMan2', 'cat', 2, 'md', true, true),
     ('derpMan3', 'dog', 5, 'lg', false, true),
     ('derpMan4', 'dog', 3, 'sm', true, true),
-    ('derpMan5', 'dog', 4, 'md', true, true),
-    ('derpMan6', 'dog', 7, 'lg', false, true),
-    ('derpMan7', 'dog', 4, 'sm', true, true),
+    ('derpMan5', 'bird', 4, 'md', true, true),
+    ('derpMan6', 'cat', 7, 'lg', false, true),
+    ('derpMan7', 'cat', 4, 'sm', true, true),
     ('derpMan8', 'dog', 3, 'md', false, true),
     ('derpMan9', 'dog', 2, 'lg', true, true),
-    ('derpMan10', 'dog', 1, 'sm', true, true);
+    ('derpMan10', 'bird', 1, 'sm', true, true);
 
 
-SELECT * FROM animals;
+SELECT * FROM warmup_exercises_db.animals;
+
+# ****** WHERE CLAUSE ******
+SELECT name,type FROM warmup_exercises_db.animals
+WHERE size LIKE 'sm%';
+
+
+#WHERE - DISTINCT
+SELECT DISTINCT type FROM warmup_exercises_db.animals;
+
+# WHERE - IN
+SELECT name,type, age FROM warmup_exercises_db.animals
+WHERE type IN ('cat', 'bird');
+
+
+# Lecture Notes for FUNCTIONS
+SELECT CONCAT(name, ' is a ', type)
+FROM animals
+ORDER BY type, name;
+
