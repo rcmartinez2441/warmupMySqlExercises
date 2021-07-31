@@ -71,3 +71,9 @@ ORDER BY Num_Of_Hires DESC
 LIMIT 10;
 
 # what is the longest last name of someone born on March 8, 1952?
+
+SELECT first_name, last_name
+FROM employees
+WHERE birth_date = '1952-03-08'
+ORDER BY LENGTH(first_name) DESC
+LIMIT 10;
